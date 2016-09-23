@@ -1,0 +1,29 @@
+{
+	"root": true,
+	"extends": "standard",
+	
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": false
+		},
+		"ecmaVersion": 6,
+		"sourceType": "script"
+	},
+	
+	"env": {
+		"browser": false,
+		"node": true
+	},
+	
+	"rules": {
+		"brace-style": [2, "stroustrup", { "allowSingleLine": false }],
+		"indent": [2, 4, { "MemberExpression": 1, "SwitchCase": 1 }],
+		"no-case-declarations": 2,
+		"no-empty": 2,
+		"no-empty-pattern": 2,
+		"no-extra-semi": 2,
+		"no-inner-declarations": [2, "both"],
+		"semi": 0,
+		"strict": [2, "safe"]
+	}
+}

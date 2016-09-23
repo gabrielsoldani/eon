@@ -1,0 +1,212 @@
+.eevee-control-locate-button,
+.eevee-control-filter-button {
+	cursor: pointer;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	color: #3b3b3b;
+	background: #fff;
+	border-radius: 5px;
+	display: block;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 28px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+.eevee-control-locate-button:hover, .eevee-control-filter-button:hover {
+	color: #111;
+}
+
+.eevee-control-locate-button.locating, .eevee-control-locate-button.locating:hover {
+	color: #999;
+}
+
+.leaflet-touch .eevee-control-locate-button,
+.leaflet-touch .eevee-control-filter-button {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	box-shadow: none;
+}
+
+
+.leaflet-control-layers-toggle {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 24px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	color: #3b3b3b !important;
+	text-decoration: none;
+	text-align: center;
+	background-image: none !important;
+}
+.leaflet-retina .leaflet-control-layers-toggle {
+	background-image: none !important;
+}
+	
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 30px;
+}
+
+.leaflet-touch .eevee-control-locate-button,
+.leaflet-touch .eevee-control-filter-button {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 34px;
+}
+
+.eevee-control-locate-button:before {
+	content: "\f124";
+	line-height: 36px;
+}
+
+.leaflet-touch .eevee-control-locate-button:before,
+.leaflet-touch .eevee-control-filter-button:before {
+	line-height: 44px;
+}
+
+.eevee-control-filter-button:before {
+	content: "\f0b0";
+	line-height: 36px;
+}
+
+.leaflet-control-layers-toggle:before {
+	content: "\f013";
+}
+
+#filter-window {
+	position: absolute;
+	width: 280px;
+	height: 300px;
+	margin-top: -160px;
+	margin-left: -150px;
+	padding: 10px;
+	top: 50%;
+	left: 50%;
+	z-index: 10000;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	color: #3b3b3b;
+	background: #fff;
+	border-radius: 10px;
+	text-align: center;
+	display: none;
+}
+
+#filter-window.enabled {
+	display: flex;
+	flex-direction: column;
+}
+
+#filter-window > h3, 
+#filter-window > div > a {
+	margin: 10px;
+}
+
+#filter-window > ol {
+	overflow-y: scroll;
+	list-style: none;
+	padding: 0;
+	margin: 15px 0 15px 0;
+	line-height: 36px;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #3b3b3b;
+	color: #d6d6d6;
+	font-family: sans-serif;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+html, body {
+	height: 100%;
+	min-width: 320px;
+}
+
+#map, #header, #footer {
+	width: 100%;
+}
+
+#map {
+	flex: 1;
+}
+
+#header, #footer {
+	height: 3em;
+}
+
+#header {
+	line-height: 3em;
+	display: flex;
+}
+
+#header > :first-child {
+	margin-left: 1em;
+}
+
+#header > :last-child {
+	margin-right: 1em;
+}
+
+#header h1 {
+	font-size: 1.25em;
+	cursor: default;
+}
+
+#header h1, #header a {
+	display: inline-block;
+	height: 100%;
+	margin: 0 0.5em;
+	padding: 0;
+}
+
+#header a.right {
+	margin-left: auto;
+}
+
+i.fa + span {
+	padding-left: 0.5em;
+}
+
+#header a, #footer a {
+	color: inherit;
+	text-decoration: none;
+	transition: color .2s ease-in-out;
+}
+#header a:hover, #footer a:hover {
+	color: white;
+}
+
+#footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer a {
+	text-align: center;
+	padding: 0.5em;
+}
+
+@media (max-width: 600px) {
+	#header a.right > i.fa + span {
+		display: none;
+	}
+	
+	#footer a {
+		font-size: 10pt;
+	}
+}

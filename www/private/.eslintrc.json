@@ -1,0 +1,21 @@
+{
+	"extends": "../../.eslintrc.json",
+	
+	"env": {
+		"browser": true,
+		"jquery": true,
+		"node": false
+	},
+	
+	"globals": {
+		"L": false,
+		"mapCenter": true,
+		"mapViewBounds": true,
+		"mapMaxBounds": true,
+		"pkmn": true,
+		"Store": true,
+		"store": true,
+		"tileServer": true,
+		"utils": true
+	}
+}

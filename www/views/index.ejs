@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Eevee.com.br</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<!-- Icons -->
+	<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="static/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="static/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="static/chrome-icon.png" sizes="192x192">
+
+	<!-- Apple-specific -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<!-- Chrome -->
+	<meta name="theme-color" content="#3b3b3b">
+
+	<link rel="stylesheet" href="static/css/vendor/normalize-4.1.1.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/css/vendor/leaflet-1.0.0-rc3.min.css">
+	<link rel="stylesheet" href="static/css/map.min.css">
+	
+	<script src="static/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>Eevee.com.br</h1>
+		<a href="https://telegram.me/EeveeRobot"><i class="fa fa-paper-plane" aria-hidden="true"></i></i><span>Notificações</span></a>
+		<a href="https://twitter.com/Eevee_BR" class="right"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+	</div>
+	<div id="map"></div>
+	<div id="footer">
+		<a href="https://pag.ae/bbcL8GD" target="_blank">Manter esse site online custa cerca de R$100,00 por semana, e recebemos menos da metade disso em doações. Clique&nbsp;aqui&nbsp;e&nbsp;contribua.</a>
+	</div>
+	<div id="filter-window">
+		<h3>Definir filtros</h3>
+		<div><a href="#" id="filter-remove-all">Ocultar todos</a><a href="#" id="filter-add-all">Mostrar todos</a></div>
+		<ol>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="1">Bulbasaur</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="2">Ivysaur</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="3">Venusaur</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="4">Charmander</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="5">Charmeleon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="6">Charizard</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="7">Squirtle</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="8">Wartortle</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="9">Blastoise</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="10">Caterpie</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="11">Metapod</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="12">Butterfree</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="13">Weedle</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="14">Kakuna</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="15">Beedrill</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="16">Pidgey</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="17">Pidgeotto</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="18">Pidgeot</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="19">Rattata</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="20">Raticate</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="21">Spearow</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="22">Fearow</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="23">Ekans</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="24">Arbok</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="25">Pikachu</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="26">Raichu</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="27">Sandshrew</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="28">Sandslash</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="29">Nidoran♀</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="30">Nidorina</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="31">Nidoqueen</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="32">Nidoran♂</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="33">Nidorino</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="34">Nidoking</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="35">Clefairy</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="36">Clefable</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="37">Vulpix</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="38">Ninetales</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="39">Jigglypuff</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="40">Wigglytuff</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="41">Zubat</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="42">Golbat</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="43">Oddish</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="44">Gloom</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="45">Vileplume</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="46">Paras</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="47">Parasect</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="48">Venonat</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="49">Venomoth</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="50">Diglett</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="51">Dugtrio</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="52">Meowth</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="53">Persian</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="54">Psyduck</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="55">Golduck</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="56">Mankey</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="57">Primeape</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="58">Growlithe</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="59">Arcanine</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="60">Poliwag</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="61">Poliwhirl</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="62">Poliwrath</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="63">Abra</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="64">Kadabra</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="65">Alakazam</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="66">Machop</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="67">Machoke</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="68">Machamp</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="69">Bellsprout</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="70">Weepinbell</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="71">Victreebel</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="72">Tentacool</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="73">Tentacruel</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="74">Geodude</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="75">Graveler</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="76">Golem</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="77">Ponyta</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="78">Rapidash</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="79">Slowpoke</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="80">Slowbro</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="81">Magnemite</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="82">Magneton</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="83">Farfetch\'d</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="84">Doduo</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="85">Dodrio</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="86">Seel</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="87">Dewgong</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="88">Grimer</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="89">Muk</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="90">Shellder</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="91">Cloyster</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="92">Gastly</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="93">Haunter</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="94">Gengar</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="95">Onix</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="96">Drowzee</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="97">Hypno</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="98">Krabby</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="99">Kingler</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="100">Voltorb</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="101">Electrode</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="102">Exeggcute</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="103">Exeggutor</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="104">Cubone</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="105">Marowak</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="106">Hitmonlee</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="107">Hitmonchan</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="108">Lickitung</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="109">Koffing</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="110">Weezing</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="111">Rhyhorn</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="112">Rhydon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="113">Chansey</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="114">Tangela</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="115">Kangaskhan</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="116">Horsea</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="117">Seadra</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="118">Goldeen</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="119">Seaking</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="120">Staryu</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="121">Starmie</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="122">Mr. Mime</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="123">Scyther</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="124">Jynx</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="125">Electabuzz</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="126">Magmar</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="127">Pinsir</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="128">Tauros</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="129">Magikarp</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="130">Gyarados</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="131">Lapras</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="132">Ditto</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="133">Eevee</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="134">Vaporeon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="135">Jolteon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="136">Flareon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="137">Porygon</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="138">Omanyte</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="139">Omastar</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="140">Kabuto</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="141">Kabutops</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="142">Aerodactyl</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="143">Snorlax</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="144">Articuno</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="145">Zapdos</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="146">Moltres</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="147">Dratini</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="148">Dragonair</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="149">Dragonite</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="150">Mewtwo</label></li>
+			<li><label><input type="checkbox" class="filter-pkmn" data-id="151">Mew</label></li>
+		</ol>
+		<a href="#" id="filter-close">Fechar</a>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="static/js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
+	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+	<script>window.L || document.write('<script src="static/js/vendor/leaflet-1.0.0-rc3.min.js"><\/script>')</script>
+	<script src="static/js/vendor/leaflet-hash-0.2.1.min.js"></script>
+	<script>
+		mapCenter = <%= JSON.stringify(mapCenter) %>;
+		mapViewBounds = <%= JSON.stringify(mapViewBounds) %>;
+		mapMaxBounds = <%= JSON.stringify(mapMaxBounds) %>;
+		tileServer = '<%= tileServer -%>';
+	</script>
+	<script src="static/js/map.min.js?_=20160917182016"></script>
+<% if (locals.analytics) { -%>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', '<%= analytics %>', 'auto');
+		ga('send', 'pageview');
+	</script>
+<% } -%>
+</body>
+</html>

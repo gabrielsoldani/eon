@@ -1,0 +1,574 @@
+.zoom-18 .responsive-icon {
+	transform: scale(1.0, 1.0);
+}
+
+.zoom-17 .responsive-icon {
+	transform: scale(0.8, 0.8);
+}
+
+.zoom-16 .responsive-icon {
+	transform: scale(0.6, 0.6);
+}
+
+.zoom-15 .responsive-icon {
+	transform: scale(0.5, 0.5);
+}
+
+.zoom-14 .responsive-icon {
+	transform: scale(0.4, 0.4);
+}
+
+.zoom-13 .responsive-icon {
+	transform: scale(0.3, 0.3);
+}
+
+.zoom-12 .responsive-icon {
+	transform: scale(0.2, 0.2);
+}
+
+.zoom-11 .responsive-icon, 
+.zoom-10 .responsive-icon, 
+.zoom-9 .responsive-icon, 
+.zoom-8 .responsive-icon, 
+.zoom-7 .responsive-icon, 
+.zoom-6 .responsive-icon, 
+.zoom-5 .responsive-icon, 
+.zoom-4 .responsive-icon, 
+.zoom-3 .responsive-icon, 
+.zoom-2 .responsive-icon, 
+.zoom-1 .responsive-icon,
+.zoom-0 .responsive-icon {
+	transform: scale(0.1, 0.1);
+}
+
+.pokestop > div {
+	background-image: url(../images/icon-pokestop.png);
+	width: 31px;
+	height: 31px;
+}
+
+.pokestop.lured > div {
+	background-image: url(../images/icon-pokestop-lured.png);
+	transform: none !important;
+}
+
+.gym > div {
+	width: 35px;
+	height: 35px;
+}
+
+.gym.n0 > div {
+	background-image: url(../images/icon-gym-0.png);
+}
+.gym.n1 > div {
+	background-image: url(../images/icon-gym-1.png);
+}
+.gym.n2 > div {
+	background-image: url(../images/icon-gym-2.png);
+}
+.gym.n3 > div {
+	background-image: url(../images/icon-gym-3.png);
+}
+
+.pokemon-sprite.rare > div {
+	transform: none !important;
+	filter: drop-shadow(0 0 5px purple);
+}
+
+.zoom-13 .pokemon-sprite:not(.rare),
+.zoom-12 .pokemon-sprite:not(.rare),
+.zoom-11 .pokemon-sprite:not(.rare),
+.zoom-10 .pokemon-sprite:not(.rare),
+.zoom-9 .pokemon-sprite:not(.rare),
+.zoom-8 .pokemon-sprite:not(.rare),
+.zoom-7 .pokemon-sprite:not(.rare),
+.zoom-6 .pokemon-sprite:not(.rare),
+.zoom-5 .pokemon-sprite:not(.rare),
+.zoom-4 .pokemon-sprite:not(.rare),
+.zoom-3 .pokemon-sprite:not(.rare),
+.zoom-2 .pokemon-sprite:not(.rare),
+.zoom-1 .pokemon-sprite:not(.rare),
+.zoom-0 .pokemon-sprite:not(.rare) {
+	display: none;
+}
+
+.zoom-13 .pokestop:not(.lured),
+.zoom-12 .pokestop:not(.lured),
+.zoom-11 .pokestop:not(.lured),
+.zoom-10 .pokestop:not(.lured),
+.zoom-9 .pokestop:not(.lured),
+.zoom-8 .pokestop:not(.lured),
+.zoom-7 .pokestop:not(.lured),
+.zoom-6 .pokestop:not(.lured),
+.zoom-5 .pokestop:not(.lured),
+.zoom-4 .pokestop:not(.lured),
+.zoom-3 .pokestop:not(.lured),
+.zoom-2 .pokestop:not(.lured),
+.zoom-1 .pokestop:not(.lured),
+.zoom-0 .pokestop:not(.lured) {
+	display: none;
+}
+
+.pokemon-sprite.rare {
+	z-index: 10000;
+}
+
+.pokemon-sprite > div {
+	background-image: url(../images/icon-pokemon-sprite.png);
+	width: 65px;
+	height: 65px;
+}
+
+.pokemon-sprite.n1 > div {
+	background-position: 0px 0px;
+}
+.pokemon-sprite.n2 > div {
+	background-position: -65px 0px;
+}
+.pokemon-sprite.n3 > div {
+	background-position: -130px 0px;
+}
+.pokemon-sprite.n4 > div {
+	background-position: -195px 0px;
+}
+.pokemon-sprite.n5 > div {
+	background-position: -260px 0px;
+}
+.pokemon-sprite.n6 > div {
+	background-position: -325px 0px;
+}
+.pokemon-sprite.n7 > div {
+	background-position: -390px 0px;
+}
+.pokemon-sprite.n8 > div {
+	background-position: 0px -65px;
+}
+.pokemon-sprite.n9 > div {
+	background-position: -65px -65px;
+}
+.pokemon-sprite.n10 > div {
+	background-position: -130px -65px;
+}
+.pokemon-sprite.n11 > div {
+	background-position: -195px -65px;
+}
+.pokemon-sprite.n12 > div {
+	background-position: -260px -65px;
+}
+.pokemon-sprite.n13 > div {
+	background-position: -325px -65px;
+}
+.pokemon-sprite.n14 > div {
+	background-position: -390px -65px;
+}
+.pokemon-sprite.n15 > div {
+	background-position: 0px -130px;
+}
+.pokemon-sprite.n16 > div {
+	background-position: -65px -130px;
+}
+.pokemon-sprite.n17 > div {
+	background-position: -130px -130px;
+}
+.pokemon-sprite.n18 > div {
+	background-position: -195px -130px;
+}
+.pokemon-sprite.n19 > div {
+	background-position: -260px -130px;
+}
+.pokemon-sprite.n20 > div {
+	background-position: -325px -130px;
+}
+.pokemon-sprite.n21 > div {
+	background-position: -390px -130px;
+}
+.pokemon-sprite.n22 > div {
+	background-position: 0px -195px;
+}
+.pokemon-sprite.n23 > div {
+	background-position: -65px -195px;
+}
+.pokemon-sprite.n24 > div {
+	background-position: -130px -195px;
+}
+.pokemon-sprite.n25 > div {
+	background-position: -195px -195px;
+}
+.pokemon-sprite.n26 > div {
+	background-position: -260px -195px;
+}
+.pokemon-sprite.n27 > div {
+	background-position: -325px -195px;
+}
+.pokemon-sprite.n28 > div {
+	background-position: -390px -195px;
+}
+.pokemon-sprite.n29 > div {
+	background-position: 0px -260px;
+}
+.pokemon-sprite.n30 > div {
+	background-position: -65px -260px;
+}
+.pokemon-sprite.n31 > div {
+	background-position: -130px -260px;
+}
+.pokemon-sprite.n32 > div {
+	background-position: -195px -260px;
+}
+.pokemon-sprite.n33 > div {
+	background-position: -260px -260px;
+}
+.pokemon-sprite.n34 > div {
+	background-position: -325px -260px;
+}
+.pokemon-sprite.n35 > div {
+	background-position: -390px -260px;
+}
+.pokemon-sprite.n36 > div {
+	background-position: 0px -325px;
+}
+.pokemon-sprite.n37 > div {
+	background-position: -65px -325px;
+}
+.pokemon-sprite.n38 > div {
+	background-position: -130px -325px;
+}
+.pokemon-sprite.n39 > div {
+	background-position: -195px -325px;
+}
+.pokemon-sprite.n40 > div {
+	background-position: -260px -325px;
+}
+.pokemon-sprite.n41 > div {
+	background-position: -325px -325px;
+}
+.pokemon-sprite.n42 > div {
+	background-position: -390px -325px;
+}
+.pokemon-sprite.n43 > div {
+	background-position: 0px -390px;
+}
+.pokemon-sprite.n44 > div {
+	background-position: -65px -390px;
+}
+.pokemon-sprite.n45 > div {
+	background-position: -130px -390px;
+}
+.pokemon-sprite.n46 > div {
+	background-position: -195px -390px;
+}
+.pokemon-sprite.n47 > div {
+	background-position: -260px -390px;
+}
+.pokemon-sprite.n48 > div {
+	background-position: -325px -390px;
+}
+.pokemon-sprite.n49 > div {
+	background-position: -390px -390px;
+}
+.pokemon-sprite.n50 > div {
+	background-position: 0px -455px;
+}
+.pokemon-sprite.n51 > div {
+	background-position: -65px -455px;
+}
+.pokemon-sprite.n52 > div {
+	background-position: -130px -455px;
+}
+.pokemon-sprite.n53 > div {
+	background-position: -195px -455px;
+}
+.pokemon-sprite.n54 > div {
+	background-position: -260px -455px;
+}
+.pokemon-sprite.n55 > div {
+	background-position: -325px -455px;
+}
+.pokemon-sprite.n56 > div {
+	background-position: -390px -455px;
+}
+.pokemon-sprite.n57 > div {
+	background-position: 0px -520px;
+}
+.pokemon-sprite.n58 > div {
+	background-position: -65px -520px;
+}
+.pokemon-sprite.n59 > div {
+	background-position: -130px -520px;
+}
+.pokemon-sprite.n60 > div {
+	background-position: -195px -520px;
+}
+.pokemon-sprite.n61 > div {
+	background-position: -260px -520px;
+}
+.pokemon-sprite.n62 > div {
+	background-position: -325px -520px;
+}
+.pokemon-sprite.n63 > div {
+	background-position: -390px -520px;
+}
+.pokemon-sprite.n64 > div {
+	background-position: 0px -585px;
+}
+.pokemon-sprite.n65 > div {
+	background-position: -65px -585px;
+}
+.pokemon-sprite.n66 > div {
+	background-position: -130px -585px;
+}
+.pokemon-sprite.n67 > div {
+	background-position: -195px -585px;
+}
+.pokemon-sprite.n68 > div {
+	background-position: -260px -585px;
+}
+.pokemon-sprite.n69 > div {
+	background-position: -325px -585px;
+}
+.pokemon-sprite.n70 > div {
+	background-position: -390px -585px;
+}
+.pokemon-sprite.n71 > div {
+	background-position: 0px -650px;
+}
+.pokemon-sprite.n72 > div {
+	background-position: -65px -650px;
+}
+.pokemon-sprite.n73 > div {
+	background-position: -130px -650px;
+}
+.pokemon-sprite.n74 > div {
+	background-position: -195px -650px;
+}
+.pokemon-sprite.n75 > div {
+	background-position: -260px -650px;
+}
+.pokemon-sprite.n76 > div {
+	background-position: -325px -650px;
+}
+.pokemon-sprite.n77 > div {
+	background-position: -390px -650px;
+}
+.pokemon-sprite.n78 > div {
+	background-position: 0px -715px;
+}
+.pokemon-sprite.n79 > div {
+	background-position: -65px -715px;
+}
+.pokemon-sprite.n80 > div {
+	background-position: -130px -715px;
+}
+.pokemon-sprite.n81 > div {
+	background-position: -195px -715px;
+}
+.pokemon-sprite.n82 > div {
+	background-position: -260px -715px;
+}
+.pokemon-sprite.n83 > div {
+	background-position: -325px -715px;
+}
+.pokemon-sprite.n84 > div {
+	background-position: -390px -715px;
+}
+.pokemon-sprite.n85 > div {
+	background-position: 0px -780px;
+}
+.pokemon-sprite.n86 > div {
+	background-position: -65px -780px;
+}
+.pokemon-sprite.n87 > div {
+	background-position: -130px -780px;
+}
+.pokemon-sprite.n88 > div {
+	background-position: -195px -780px;
+}
+.pokemon-sprite.n89 > div {
+	background-position: -260px -780px;
+}
+.pokemon-sprite.n90 > div {
+	background-position: -325px -780px;
+}
+.pokemon-sprite.n91 > div {
+	background-position: -390px -780px;
+}
+.pokemon-sprite.n92 > div {
+	background-position: 0px -845px;
+}
+.pokemon-sprite.n93 > div {
+	background-position: -65px -845px;
+}
+.pokemon-sprite.n94 > div {
+	background-position: -130px -845px;
+}
+.pokemon-sprite.n95 > div {
+	background-position: -195px -845px;
+}
+.pokemon-sprite.n96 > div {
+	background-position: -260px -845px;
+}
+.pokemon-sprite.n97 > div {
+	background-position: -325px -845px;
+}
+.pokemon-sprite.n98 > div {
+	background-position: -390px -845px;
+}
+.pokemon-sprite.n99 > div {
+	background-position: 0px -910px;
+}
+.pokemon-sprite.n100 > div {
+	background-position: -65px -910px;
+}
+.pokemon-sprite.n101 > div {
+	background-position: -130px -910px;
+}
+.pokemon-sprite.n102 > div {
+	background-position: -195px -910px;
+}
+.pokemon-sprite.n103 > div {
+	background-position: -260px -910px;
+}
+.pokemon-sprite.n104 > div {
+	background-position: -325px -910px;
+}
+.pokemon-sprite.n105 > div {
+	background-position: -390px -910px;
+}
+.pokemon-sprite.n106 > div {
+	background-position: 0px -975px;
+}
+.pokemon-sprite.n107 > div {
+	background-position: -65px -975px;
+}
+.pokemon-sprite.n108 > div {
+	background-position: -130px -975px;
+}
+.pokemon-sprite.n109 > div {
+	background-position: -195px -975px;
+}
+.pokemon-sprite.n110 > div {
+	background-position: -260px -975px;
+}
+.pokemon-sprite.n111 > div {
+	background-position: -325px -975px;
+}
+.pokemon-sprite.n112 > div {
+	background-position: -390px -975px;
+}
+.pokemon-sprite.n113 > div {
+	background-position: 0px -1040px;
+}
+.pokemon-sprite.n114 > div {
+	background-position: -65px -1040px;
+}
+.pokemon-sprite.n115 > div {
+	background-position: -130px -1040px;
+}
+.pokemon-sprite.n116 > div {
+	background-position: -195px -1040px;
+}
+.pokemon-sprite.n117 > div {
+	background-position: -260px -1040px;
+}
+.pokemon-sprite.n118 > div {
+	background-position: -325px -1040px;
+}
+.pokemon-sprite.n119 > div {
+	background-position: -390px -1040px;
+}
+.pokemon-sprite.n120 > div {
+	background-position: 0px -1105px;
+}
+.pokemon-sprite.n121 > div {
+	background-position: -65px -1105px;
+}
+.pokemon-sprite.n122 > div {
+	background-position: -130px -1105px;
+}
+.pokemon-sprite.n123 > div {
+	background-position: -195px -1105px;
+}
+.pokemon-sprite.n124 > div {
+	background-position: -260px -1105px;
+}
+.pokemon-sprite.n125 > div {
+	background-position: -325px -1105px;
+}
+.pokemon-sprite.n126 > div {
+	background-position: -390px -1105px;
+}
+.pokemon-sprite.n127 > div {
+	background-position: 0px -1170px;
+}
+.pokemon-sprite.n128 > div {
+	background-position: -65px -1170px;
+}
+.pokemon-sprite.n129 > div {
+	background-position: -130px -1170px;
+}
+.pokemon-sprite.n130 > div {
+	background-position: -195px -1170px;
+}
+.pokemon-sprite.n131 > div {
+	background-position: -260px -1170px;
+}
+.pokemon-sprite.n132 > div {
+	background-position: -325px -1170px;
+}
+.pokemon-sprite.n133 > div {
+	background-position: -390px -1170px;
+}
+.pokemon-sprite.n134 > div {
+	background-position: 0px -1235px;
+}
+.pokemon-sprite.n135 > div {
+	background-position: -65px -1235px;
+}
+.pokemon-sprite.n136 > div {
+	background-position: -130px -1235px;
+}
+.pokemon-sprite.n137 > div {
+	background-position: -195px -1235px;
+}
+.pokemon-sprite.n138 > div {
+	background-position: -260px -1235px;
+}
+.pokemon-sprite.n139 > div {
+	background-position: -325px -1235px;
+}
+.pokemon-sprite.n140 > div {
+	background-position: -390px -1235px;
+}
+.pokemon-sprite.n141 > div {
+	background-position: 0px -1300px;
+}
+.pokemon-sprite.n142 > div {
+	background-position: -65px -1300px;
+}
+.pokemon-sprite.n143 > div {
+	background-position: -130px -1300px;
+}
+.pokemon-sprite.n144 > div {
+	background-position: -195px -1300px;
+}
+.pokemon-sprite.n145 > div {
+	background-position: -260px -1300px;
+}
+.pokemon-sprite.n146 > div {
+	background-position: -325px -1300px;
+}
+.pokemon-sprite.n147 > div {
+	background-position: -390px -1300px;
+}
+.pokemon-sprite.n148 > div {
+	background-position: 0px -1365px;
+}
+.pokemon-sprite.n149 > div {
+	background-position: -65px -1365px;
+}
+.pokemon-sprite.n150 > div {
+	background-position: -130px -1365px;
+}
+.pokemon-sprite.n151 > div {
+	background-position: -195px -1365px;
+}
