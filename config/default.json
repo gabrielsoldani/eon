@@ -25,9 +25,12 @@
 		"analytics": null,
 		
 		// Default map view
-		"mapCenter": [-22.9110136, -43.2093726],
-		"mapViewBounds": [[-22.831705, -43.268868], [-22.995066, -43.158329]],
-		"mapMaxBounds": [[-23.6817832, -44.8884938], [-20.7631777, -40.673272]],
+		// Commented out because you should really specify your own.
+		//"mapCenter": [-22.9110136, -43.2093726],
+		//"mapViewBounds": [[-22.831705, -43.268868], [-22.995066, -43.158329]],
+		
+		// Map maximum bounds (useful if your tile server doesn't cover the whole world)
+		"mapMaxBounds": [[-90, -180], [90, 180]],
 		
 		// Default tile server
 		"tileServer": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
